@@ -27,6 +27,9 @@ local config = {
         '--add-opens', 'java.base/java.util=ALL-UNNAMED',
         '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
 
+        '-javaagent:/Users/david/jars/lombok.jar',
+        -- '-Xbootclasspath/a:/Users/david/jars/lombok.jar',
+
         -- 💀
         -- ~/.local/share/nvim/lsp_servers/jdtls/plugins
         '-jar',

@@ -144,7 +144,7 @@ COLOR=$YELLOW
 
 export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$COLOR\$(git_branch)\e[00m\$ "
 
-
+export GRADLE_USER_HOME="/Users/david/work/moneta-gradle/"
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export DOTNET_HOME="/usr/local/share/dotnet/x64/"
 export SCRIPTS="/Users/david/scripts"

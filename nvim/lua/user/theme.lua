@@ -4,4 +4,6 @@ require("onedark").setup({
     style = "dark"
 })
 
-require("onedark").load()
+-- require("onedark").load()
+vim.g.tokyonight_style = "night"
+vim.cmd[[colorscheme tokyonight]]

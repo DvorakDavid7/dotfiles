@@ -17,6 +17,7 @@ local function auto_install_packer()
         vim.cmd [[packadd packer.nvim]]
     end
 end
+
 -- auto_install_packer()
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -30,6 +31,7 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
+    print("packer is not installed")
     return
 end
 

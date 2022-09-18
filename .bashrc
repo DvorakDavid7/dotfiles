@@ -148,12 +148,18 @@ export GRADLE_USER_HOME="/Users/david/work/moneta-gradle/"
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export DOTNET_HOME="/usr/local/share/dotnet/x64/"
 export SCRIPTS="/Users/david/scripts"
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$DOTNET_HOME:$SCRIPTS:$PATH"
-export BASH_SILENCE_DEPRECATION_WARNING=1
+export ASCIIDOC="/Users/david/bins/asciidoctorj-2.5.4/bin"
 
+# managed automaticaly via .profile and .bash_profile
+export ELAN_HOME="/Users/david/.elan/bin"
+
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$ASCIIDOC:$DOTNET_HOME:$SCRIPT:$PATH"
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
 export CPPFLAGS="-I/opt/homebrew/Cellar/unixodbc/2.3.11/include"
 export LDFLAGS="-L/opt/homebrew/Cellar/unixodbc/2.3.11/lib -liodbc -liodbcinst"
 
+export GRAPHVIZ_DOT="/opt/homebrew/bin/dot"
 
 CC=g++-11
 # compile only cpp program

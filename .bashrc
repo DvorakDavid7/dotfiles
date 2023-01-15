@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+	# ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -81,6 +81,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
+alias mc='EDITOR=nvim mc'
+
 # colored GCC warnings and errors
 # export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -144,7 +146,6 @@ COLOR=$YELLOW
 
 export PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$COLOR\$(git_branch)\e[00m\$ "
 
-export GRADLE_USER_HOME="/Users/david/work/moneta-gradle/"
 export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 export DOTNET_HOME="/usr/local/share/dotnet/x64/"
 export SCRIPTS="/Users/david/scripts"
@@ -152,14 +153,19 @@ export ASCIIDOC="/Users/david/bins/asciidoctorj-2.5.4/bin"
 
 # managed automaticaly via .profile and .bash_profile
 export ELAN_HOME="/Users/david/.elan/bin"
+export JET_BRAINS="/Users/david/scripts"
 
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$ASCIIDOC:$DOTNET_HOME:$SCRIPT:$PATH"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$ASCIIDOC:$DOTNET_HOME:$SCRIPT:$PATH:$JET_BRAINS"
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export CPPFLAGS="-I/opt/homebrew/Cellar/unixodbc/2.3.11/include"
 export LDFLAGS="-L/opt/homebrew/Cellar/unixodbc/2.3.11/lib -liodbc -liodbcinst"
 
 export GRAPHVIZ_DOT="/opt/homebrew/bin/dot"
+
+export DYLD_LIBRARY_PATH="$DYLD_LIBRARY_PATH:/opt/homebrew/lib"
+
+export PS1="${PS1}\n$ "
 
 CC=g++-11
 # compile only cpp program
@@ -179,8 +185,8 @@ function cmprs() {
 
 # ssh to my server
 function sserver() {
-    echo "server" | pbcopy
-    ssh webserver@20.86.191.72
+    echo "ServerServer$" | pbcopy
+    ssh thanos@104.47.149.60
 }
 
 function helthCheck() {
